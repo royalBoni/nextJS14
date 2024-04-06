@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+
+.imgContainer {
+  flex: 1;
+  position: relative;
+}
+
+.textContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about {
+  color: var(--btn);
+  font-weight: bold;
+}
+
+.title {
+  font-size: 56px;
+}
+
+.desc {
+  font-size: 20px;
+}
+
+.analysisContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myAnalysisItem {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.analysisValue {
+  color: var(--btn);
+}
+
+.analysisDescription {
+  font-size: 15px;
+}
