@@ -46,3 +46,14 @@
 .analysisDescription {
   font-size: 15px;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    justify-content: center;
+    text-align: center;
+  }
+}
