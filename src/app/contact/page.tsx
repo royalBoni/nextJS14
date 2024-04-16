@@ -1,10 +1,8 @@
-"use client";
+//"use client";
 
 import React /* , { useState, useEffect } */ from "react";
 import styles from "./contact.module.css";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import { ComponentType } from "react";
 /* import HydrationTest from "../../components/hydrationTest"; */ //rather use dynamic rendering
 
 const ContactPage = () => {
@@ -21,14 +19,14 @@ const ContactPage = () => {
     () => import("../../components/hydrationTest"),
     { ssr: false }
   ); */
-  const a = Math.random();
-  console.log(a);
+  /*  const a = Math.random();
+  console.log(a); */
   return (
     <div className={styles.container}>
       {/* {isClient && <p>{a}</p>} */}
       {/* <HydrationTest /> */}
       {/* <HydrationTestNoSSR /> */}
-      <div suppressHydrationWarning>{a}</div>
+      {/* <div suppressHydrationWarning>{a}</div> */}
       <div className={styles.imgContainer}>
         <Image src="/contact.png" alt="" fill />
       </div>

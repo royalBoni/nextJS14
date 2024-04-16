@@ -49,7 +49,7 @@ const Links = () => {
       {open && (
         <div className={styles.mobileLinks}>
           {links.map((link) => (
-            <NavLink item={link} />
+            <NavLink item={link} key={link.path} />
           ))}
         </div>
       )}
