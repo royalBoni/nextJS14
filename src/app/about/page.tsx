@@ -2,6 +2,11 @@ import React from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 
+export const metadata = {
+  title: "About page",
+  description: "this is my about page",
+};
+
 const AboutPage = () => {
   type myAnalysisType = {
     value: number;

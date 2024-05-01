@@ -1,6 +1,5 @@
 .container {
   display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
@@ -9,6 +8,17 @@
   font-weight: bold;
 }
 
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .username {
   font-weight: 500;
+}
+
+.authorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

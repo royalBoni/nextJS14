@@ -1,13 +1,16 @@
 import React from "react";
 import styles from "./postUser.module.css";
 import { getUser } from "../../lib/data";
+import Image from "next/image";
 
-type UserType =
-  | {
-      id: number;
-      name: string;
-    }
-  | undefined;
+type UserType = {
+  id: number;
+  username: string;
+  email: string;
+  password: string;
+  img: string;
+  isAdmin: boolean;
+};
 
 //FETCHIND DATA BY AN API
 /* const getData = async (userId: number) => {
@@ -25,17 +28,26 @@ type UserType =
   return res.json();
 };
  */
-const PostUser = async ({ userId }: { userId: number }) => {
+const PostUser = async ({ userId }: { userId: string }) => {
   // FETCHING DATA WITH API
   //const user = await getData(userId);
 
   //FETCHING USER WITHOUT AN API
-  const user: UserType = await getUser(userId);
+  const user = await getUser(userId);
 
   return (
     <div className={styles.container}>
-      <span className={styles.title}>Author</span>
-      <span className={styles.username}>{user?.name}</span>
+      <Image
+        className={styles.avatar}
+        src={user?.img ? `${user?.img}` : "/noavatar.png"}
+        alt=""
+        width={50}
+        height={50}
+      />
+      <div className={styles.authorContainer}>
+        <span className={styles.title}>Author</span>
+        <span className={styles.username}>{user?.username}</span>
+      </div>
     </div>
   );
 };

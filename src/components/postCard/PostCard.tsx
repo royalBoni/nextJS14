@@ -11,7 +11,11 @@ const PostCard = ({ post }: { post: postType }) => {
       <div className={styles.top}>
         <div className={styles.imageContainer}>
           <Image
-            src="https://images.pexels.com/photos/20259609/pexels-photo-20259609/free-photo-of-two-elegant-women-in-maxi-dresses-and-headscarves-posing-in-a-studio.jpeg"
+            src={
+              post.img
+                ? `${post.img}`
+                : "https://images.pexels.com/photos/20259609/pexels-photo-20259609/free-photo-of-two-elegant-women-in-maxi-dresses-and-headscarves-posing-in-a-studio.jpeg"
+            }
             alt=""
             fill
           />
@@ -20,8 +24,8 @@ const PostCard = ({ post }: { post: postType }) => {
       </div>
       <div className={styles.buttom}>
         <h1 className={styles.title}>{post.title}</h1>
-        <p className={styles.desc}>{post.body}</p>
-        <Link className={styles.link} href={`/blog/${post.id}`}>
+        <p className={styles.desc}>{post.description}</p>
+        <Link className={styles.link} href={`/blog/${post.slug}`}>
           READ MORE
         </Link>
       </div>

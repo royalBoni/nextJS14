@@ -5,6 +5,10 @@ import styles from "./contact.module.css";
 import Image from "next/image";
 /* import HydrationTest from "../../components/hydrationTest"; */ //rather use dynamic rendering
 
+export const metadata = {
+  title: "Contact Page",
+  description: "contact page for all your information",
+};
 const ContactPage = () => {
   /* //using the use effect to prevent hydration.
   const [isClient, setIsClient] = useState(false);
